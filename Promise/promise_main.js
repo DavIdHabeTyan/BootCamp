@@ -1,3 +1,4 @@
+/*
 let promise = new Promise((resolve, reject) => {
    console.log("1");
    let status = 205;
@@ -12,6 +13,9 @@ let promise = new Promise((resolve, reject) => {
 
 console.log(promise)
 
+ */
+
+
 /*
 // ---------- inch ktpi
 let prom = new Promise((res) => {
@@ -22,3 +26,52 @@ console.log(3)
 
 //  -----------   3  ---- 1 ---- 2
  */
+
+
+///// Meschyan
+/*
+function server() {
+   let status = 20
+   return new Promise((res, rej) => {
+      if (status >= 8 && status < 15) {
+         res("Hello Window")
+      }else{
+         rej("write correct number");
+      }
+   })
+}
+
+const port = server();
+port.then((result) => {
+   console.log(result)
+}).catch((err) => {
+   console.log("Error")
+})
+
+ */
+/*
+let a = setTimeout(() => {
+   console.log(1);
+}, 2000)
+
+let b = console.log(2);
+
+let c = setTimeout(() => {
+   console.log(3)
+},1000)
+
+
+ */
+
+function prom() {
+   return new Promise((resolve, reject) => {
+      setTimeout(() => {
+         resolve(1)
+      }, 2000)
+   })
+}
+
+let result = prom();
+result.then(resolve => console.log(resolve)).then(() => console.log(2)).then(() => setTimeout(() => {
+   console.log(3)
+},1000))
