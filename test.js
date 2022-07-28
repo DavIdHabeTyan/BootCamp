@@ -1,15 +1,18 @@
-function main() {
-   console.log("1")
-   function callback(result) {
-      console.log(result);
-   }
+let player1 = Promise.resolve("1");
+let player2 = Promise.resolve("2");
+let player3 = new Promise((res) => {
+   setTimeout(() => res("hi"), 8000);
+})
 
-   setTimeout((callback) => {
-      let result = 2;
-      callback(result);
-   }, 3000)
-   console.log(3)
-}
+console.log(1);
 
-console.log(main())
+player1.then(res => console.log("p1 first then"))
+   .then(es => console.log("p1 second then"));
+console.log(2);
+setTimeout(() => console.log("3000"), 3000);
+player2.then(res => console.log("p2 first then"))
+   .then(es => console.log("p2 second then"));
 
+setTimeout(() => console.log("2000"), 12000);
+
+player3.then(res => console.log("p3"))

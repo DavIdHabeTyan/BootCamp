@@ -75,3 +75,32 @@ let result = prom();
 result.then(resolve => console.log(resolve)).then(() => console.log(2)).then(() => setTimeout(() => {
    console.log(3)
 },1000))
+
+
+
+////////// --------------------------------  ինչ կտպի
+function foo() {
+   let player1 = Promise.resolve("1");
+   let player2 = Promise.resolve("2");
+   let player3 = new Promise((res) => {
+      setTimeout(() => res("Third"), 8000);
+   })
+
+   console.log(1);
+
+   player1.then(res => console.log("p1 first then"))
+      .then(es => console.log("p1 second then"));
+   console.log(2);
+   setTimeout(() => console.log("3000"), 3000);
+   player2.then(res => console.log("p2 first then"))
+      .then(es => console.log("p2 second then"));
+
+   setTimeout(() => console.log("2000"), 12000);
+
+   player3.then(res => console.log("p3"))
+
+   // 1 2 2000 3000 p1 p2 p3 p1 p2 //Arthur
+   // 1 2 p1 p2 p3 p1s p2s 2000 3000 //Razmik
+   // 1 2 p1 p2 p1s p2s 2000 3000 p3 //Narek
+}
+foo();
