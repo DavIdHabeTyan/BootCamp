@@ -62,7 +62,7 @@ let c = setTimeout(() => {
 
 
  */
-
+/*
 function prom() {
    return new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -76,8 +76,9 @@ result.then(resolve => console.log(resolve)).then(() => console.log(2)).then(() 
    console.log(3)
 },1000))
 
+*/
 
-
+/*
 ////////// --------------------------------  ինչ կտպի
 function foo() {
    let player1 = Promise.resolve("1");
@@ -99,8 +100,26 @@ function foo() {
 
    player3.then(res => console.log("p3"))
 
-   // 1 2 2000 3000 p1 p2 p3 p1 p2 //Arthur
-   // 1 2 p1 p2 p3 p1s p2s 2000 3000 //Razmik
-   // 1 2 p1 p2 p1s p2s 2000 3000 p3 //Narek
+
+   // output =>  1 2 p1 p2 p1s p2s 3000  p3  2000
 }
 foo();
+
+
+
+ */
+/*
+const promise = new Promise((res, rej) => {
+   let flag = !Math.round(Math.random());
+   flag ? res("Ura"): rej("Ops");
+});
+
+promise.then((res) => console.log(res)).catch((error) => console.log(error))
+
+console.log(promise);
+*/
+let prom = Promise.resolve(5)
+let rej = Promise.reject(6)
+let result = Promise.all([prom,rej]);
+
+console.log(result)
