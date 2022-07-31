@@ -25,7 +25,7 @@ function Timer(time) {
 
 let timer = new Timer(9600) // secunde
 
-timer.restart()
+timer.start();
 
 
 

@@ -1,14 +1,21 @@
 /*
+const calc = (a, b) => {
+   console.log(a+ b)
+}
+let id = setTimeout(() => calc(1,2), 2000);
+
+
+
+/*
+
 function foo() {
    console.log("Hi");
 
    setTimeout(() => {
       console.log("barev")
    }, 2000)
-
 }
 console.log(foo())
-
 
  */
 
@@ -62,7 +69,7 @@ console.log(bb)
 
 /// generate  Timer in setInterval;
 
-
+/*
 
 function general() {
    let timeId;
@@ -78,5 +85,8 @@ function general() {
 }
 
 console.log(general())
+
+
+ */
 
 
