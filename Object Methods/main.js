@@ -1,8 +1,20 @@
 
 
 
-// Object.assign()
+// ----  -- Object.assign() -----
 
+const obj1 = {
+   name: "Dav"
+};
+const obj2 = {
+   age: 32,
+}
+
+let margeObject = Object.assign(obj1, obj2);
+console.log(margeObject)
+
+
+////////// ------------Object.defineProperty ---------------
 let user = {
    name: "Dav",
 }
