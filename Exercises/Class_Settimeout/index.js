@@ -1,3 +1,6 @@
+
+//write Timer
+
 class Timer{
    constructor(minut, timeId) {
       this._time = minut;
