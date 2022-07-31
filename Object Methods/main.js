@@ -25,7 +25,7 @@ const human = {
    }
 };
 
-const developer = Object.create(human);
+const developer = Object.create(human); /// Object.create!
 developer.name = "Developer";
 
 developer.writeCode = () => {
