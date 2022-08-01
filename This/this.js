@@ -15,4 +15,4 @@ let that = {
 }
 
 // console.log(that.boo());
-console.log(that.goo());
+that.goo()
