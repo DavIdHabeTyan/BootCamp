@@ -100,4 +100,6 @@ const mercedes = new Mercedes({
 
 console.log(mercedes)
 
-console.log(mercedes instanceof Machine)
+console.log(mercedes instanceof Machine);
+
+
