@@ -81,3 +81,15 @@ console.log(changeList(arr))
  */
 
 
+const I = 4;
+const a = [];
+for(let i = 0; i < I; i++) {
+   a.push(i);
+}
+
+a.length = 2;
+console.log(a)
+
+
+
+console.log(["car"] instanceof Array) // output => true

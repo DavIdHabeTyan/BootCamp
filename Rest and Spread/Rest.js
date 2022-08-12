@@ -31,3 +31,11 @@ console.log(address)
 
 const {name: otherName} = people;
 console.log(otherName)
+
+
+
+function getAge(...args) {
+   console.log(typeof args)
+}
+
+getAge(25); // output => object

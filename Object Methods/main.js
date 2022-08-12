@@ -46,3 +46,12 @@ developer.writeCode = () => {
 
 developer.writeCode();
 developer.sayName();
+
+console.log(["car"] instanceof Object) // output => true
+
+
+let a = [1, 2,3 ,4 ];
+
+let b = a.slice(1, 2);
+
+console.log(b)

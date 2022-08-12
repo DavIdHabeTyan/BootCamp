@@ -1,3 +1,19 @@
+//inchep anel vor tpi
+
+// console.log(1);
+// setTimeout(() => console.log(2));
+// console.log(3);
+/*
+let prom = new Promise((resolve, reject) => {
+
+   setTimeout(resolve(1), 1000);
+
+}).then((resolve) => console.log(resolve))
+   .then((resolve) => console.log(2))
+   .then((resolve) => setTimeout(() => console.log(3), 2000))
+
+*/
+
 /*
 let promise = new Promise((resolve, reject) => {
    console.log("1");
@@ -15,18 +31,18 @@ console.log(promise)
 
  */
 
-
 /*
+
 // ---------- inch ktpi
 let prom = new Promise((res) => {
    setTimeout(res(),2000);
-}).then(res => console.log(1)).then(res => console.log(2)); ansinxron koda
+}).then(res => console.log(1)).then(res => console.log(2)); //  ansinxron koda
 console.log(3)
 ////////// promisner@ katarvum en sixron bayc iranc metodner@ asinxron;
 
 //  -----------   3  ---- 1 ---- 2
- */
 
+ */
 
 ///// Meschyan
 /*
@@ -118,8 +134,64 @@ promise.then((res) => console.log(res)).catch((error) => console.log(error))
 
 console.log(promise);
 */
+/*
 let prom = Promise.resolve(5)
 let rej = Promise.reject(6)
-let result = Promise.all([prom,rej]);
+let result = Promise.all([prom, rej]);
 
-console.log(result)
+console.log(result);
+*/
+
+/// ինչպես անել որ տպի հերթականությամբ և ինտերվալով;.
+/*
+function A() {
+   return new Promise((resolve, reject) => {
+      setTimeout(() => {
+         resolve("A completed");
+      }, 1000);
+   });
+}
+
+function B() {
+   return new Promise ((resolve, reject) => {
+      setTimeout(() => {
+         resolve("B completed");
+      }, 1000);
+   });
+}
+
+function C() {
+   return new Promise((resolve, reject) => {
+      setTimeout(() => {
+         resolve("C completed");
+      }, 1000);
+   });
+}
+
+A().then((res) => {
+   console.log(res);
+   return B();
+}).then((res) => {
+   console.log(res);
+   return C();
+}).then((res) => {
+   console.log(res);
+})
+
+ */
+
+function authenticate(userName, password) {
+   return new Promise((resolve, reject) => {
+      setTimeout(() => {
+         if(userName === "admin" && password === 1234) {
+            resolve({success: true});
+         } else{
+            reject({success: false});
+         }
+      }, 1500)
+   })
+}
+
+authenticate("admin", 1234)
+.then((res) => console.log(res))
+.then((err) => console.log(err));
