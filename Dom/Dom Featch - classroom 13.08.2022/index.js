@@ -2,14 +2,37 @@ const URL = "./employees.json"
 const button = document.getElementById("button");
 const tableBody = document.getElementById("employees");
 
-tableBody.addEventListener("click", handleBodyClick);
+// --- delete button
+// const taskDeleteEl = document.createElement('button');
+// taskDeleteEl.classList.add("delete")
+// taskDeleteEl.innerHTML = "Delete"
+//
+// taskDeleteEl.addEventListener("click", (e) => {
+//    console.log("heee");
+// })
+
+
+// taskDeleteEl.addEventListener("click", (e) => {
+//    if(e.target.nodeName === "TD"){
+//       e.target.parentNode.remove();
+//    }
+// })
+
+
+// tableBody.addEventListener("click", handleBodyClick);
 button.addEventListener("click", handleButtonClick);
 
-   function handleBodyClick(e) {
-      if(e.target.nodeName === "TD"){
-         e.target.parentNode.remove();
-      }
-   }
+   // function handleBodyClick(e) {
+   //    if(e.target.nodeName === "TD"){
+   //       e.target.parentNode.remove();
+   //    }
+   // }
+
+function deleteElement(event) {
+   let e = event.target;
+   let i = e.parentNode.parentNode.rowIndex;
+   document.getElementById("myTable").deleteRow(i);
+}
 
    function handleButtonClick() {
       tableBody.innerHTML = getLoaderHTML();
@@ -26,10 +49,18 @@ button.addEventListener("click", handleButtonClick);
                elem.id,
                elem.name,
                elem.status,
-
             );
          });
       })
+      .then(() => {
+         const deleteButtons = document.querySelectorAll(
+            "input[value = 'Delete']"
+      )
+         deleteButtons.forEach(button =>
+            button.addEventListener("click", deleteElement)
+         );
+      })
+
       .catch((err) => {
          tableBody.innerHTML = getFailMsgHTML();
       });
@@ -37,13 +68,18 @@ button.addEventListener("click", handleButtonClick);
 
 
 function getRowHTML(id, name, status) {
+
    return `
    <tr>
     <td>${id}</td>
     <td>${name}</td>
-    <td>${status}</td>
+    <td>${status} </td>
+    <td>
+      <input type="button" value ="Delete"/> 
+     </td>
   </tr>  `
 }
+
 
 function getLoaderHTML() {
    return `
@@ -65,3 +101,5 @@ function getFailMsgHTML() {
       </td>
     </tr>`;
 }
+
+

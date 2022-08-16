@@ -56,6 +56,7 @@ async function wait() {
 
 wait()
 */
+
 /*
 function sleep(ms) {
    return new Promise((resolve) => {
@@ -84,6 +85,54 @@ authenticate("admin", 1234)
 
 
  */
+
+/*
+function func() {
+   return new Promise((resolve, reject) => {
+      setTimeout(() => {
+         // reject(new Error("vay vay"));
+         reject(11);
+      }, 1500)
+   })
+}
+
+async function func2() {
+   try{
+      const p = await func();
+      return p + 11;
+   }catch (error) {
+      return 999
+   }
+}
+
+func2().then(res => {
+   console.log(res);
+})
+   .catch(err => {
+      console.log(err)
+   })
+
+*/
+function func2() {
+   return new Promise((resolve, reject) =>{
+      resolve(5)
+   });
+}
+
+
+
+async function func() {
+   const p =  await func2();
+
+   return 5 + p
+}
+
+
+
+
+func().then(res => {
+   console.log(res);
+});
 
 
 
