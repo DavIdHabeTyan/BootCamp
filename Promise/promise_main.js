@@ -143,7 +143,7 @@ console.log(result);
 */
 
 /// ինչպես անել որ տպի հերթականությամբ և ինտերվալով;.
-/*
+
 function A() {
    return new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -178,8 +178,8 @@ A().then((res) => {
    console.log(res);
 })
 
- */
 
+/*
 function authenticate(userName, password) {
    return new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -195,3 +195,5 @@ function authenticate(userName, password) {
 authenticate("admin", 1234)
 .then((res) => console.log(res))
 .then((err) => console.log(err));
+
+ */

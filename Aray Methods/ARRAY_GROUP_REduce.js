@@ -17,3 +17,6 @@ function group(arr, prop) {
 }
 
 console.log(group(list, "country"))
+
+
+
