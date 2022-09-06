@@ -32,7 +32,15 @@ counter.increment();
 counter.increment();
 counter.decrement();
 
-console.log(counter.getCount());
+console.log(counter.getCount()); // => 2
 
 
+function f(number) {
+   f.count = (f.count|| 0 ) + number;
+   return f;
+}
 
+const {count} = f(1)(2)(3)(4)(5);
+
+
+console.log(count) // => 15
