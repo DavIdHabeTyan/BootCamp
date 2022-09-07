@@ -57,3 +57,39 @@ function FindIdPerson(user){
 const people = new FindIdPerson([{name: "Ani"}, {id: 2345789}]);
 const peoplesMarge = people.margePerson([{id:2345789}, {status: "married"}]);
 console.log(peoplesMarge)
+
+
+//gtnel krknvox tver@
+
+let arr = [1, 2, 3, 4, 5,0, 1,2, 3, 4, 5];
+
+let unrepatable = arr.reduce((acum, elem, ) => {
+   if(!acum.includes(elem)){
+      acum.push(elem)
+   }
+   return acum
+},[])
+
+console.log(unrepatable)
+
+
+/// group reduce
+/*
+let list = [
+   { name: "Alice", job: "Data Analyst", country: "AU" },
+   { name: "Bob", job: "Pilot", country: "US" },
+   { name: "Lewis", job: "Pilot", country: "US" },
+   { name: "Karen", job: "Software Eng", country: "CA" },
+   { name: "Jona", job: "Painter", country: "CA" },
+   { name: "Jeremy", job: "Artist", country: "SP" }
+];
+function group(arr, prop) {
+   return arr.reduce((acum, elem) => {
+      let item = elem[prop];
+      (acum[item] = acum[item] || []).push(elem)
+      return acum
+   },{})
+}
+console.log(group(list, 'country'))
+
+ */
