@@ -20,26 +20,14 @@
 //
 
 
+let arr = [12, 4, 8, 1, 5, 0, 1, 3 , 12, 3, 1, 2, 3, 4, 5]
+
+let result =[];
+for(let i = 0, c = arr.length; i < arr.length; i++, c--) {
 
 
-let list = [
-   { name: "Alice", job: "Data Analyst", country: "AU" },
-   { name: "Bob", job: "Pilot", country: "US" },
-   { name: "Lewis", job: "Pilot", country: "US" },
-   { name: "Karen", job: "Software Eng", country: "CA" },
-   { name: "Jona", job: "Painter", country: "CA" },
-   { name: "Jeremy", job: "Artist", country: "SP" }
-];
+       result.push(arr[c])
 
-
-
-function group(arr, prop) {
-   return arr.reduce((acum, elem) => {
-      let item = elem[prop];
-      (acum[item] = acum[item] || []).push(elem)
-      return acum
-   },{})
 
 }
-
-console.log(group(list, 'country'))
+console.log(result)
