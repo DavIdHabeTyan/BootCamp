@@ -51,6 +51,8 @@ console.log(count) // => 15
 
 
 //function sum
+
+
 /*
 function sum(a) {
    return (b) => {
@@ -62,5 +64,7 @@ function sum(a) {
 }
 const numberSum = sum(1)(2)(3)(4)(5);
 console.log(numberSum());
+
+
 
  */

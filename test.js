@@ -20,14 +20,35 @@
 //
 
 
-let arr = [12, 4, 8, 1, 5, 0, 1, 3 , 12, 3, 1, 2, 3, 4, 5]
+// let arr = [12, 4, 8, 1, 5, 0, 1, 3 , 12, 3, 1, 2, 3, 4, 5]
+//
+// let result =[];
+// for(let i = 0, c = arr.length; i < arr.length; i++, c--) {
+//
+//
+//        result.push(arr[c])
+//
+//
+// }
+// console.log(result)
 
-let result =[];
-for(let i = 0, c = arr.length; i < arr.length; i++, c--) {
-
-
-       result.push(arr[c])
-
-
+const obj1 = {
+   result: 0
 }
-console.log(result)
+
+const obj2 = {
+   result: 0
+}
+
+function reduceAdd(){
+   let result = 0
+   for(let i = 0, len = arguments.length; i < len; i++){
+      result += arguments[i]
+   }
+   this.result = result
+}
+
+reduceAdd.apply(obj1, [1,2,3,4,5])
+
+
+
