@@ -96,3 +96,5 @@ console.log(["car"] instanceof Array) // output => true
 
 
 
+
+
