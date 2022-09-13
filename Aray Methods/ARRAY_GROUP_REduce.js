@@ -9,6 +9,8 @@ let list = [
    { name: "Jeremy", job: "Artist", country: "SP" }
 ];
 
+
+
 function group(arr, prop) {
    return arr.reduce((accum, elem) => {
       (accum[elem[prop]] = accum[elem[prop]] || []).push(elem);
@@ -17,9 +19,14 @@ function group(arr, prop) {
 }
 console.log(group(list, "country"))
 
+
+
  */
 
+
+
 //AVELACNEL KEY COLOR : GUYN
+
 
 const obj = {
    red: [
@@ -48,9 +55,10 @@ const obj = {
    ],
 };
 
-
-
 for(key in obj) {
    obj[key].forEach(elem => elem['color'] = key)
 }
-console.log(obj)                                                                 
+console.log(obj)
+
+
+

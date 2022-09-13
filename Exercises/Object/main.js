@@ -1,24 +1,24 @@
 //object group sargel Array
 //object group to Array
 
-/*
+
 let obj = {
    green: [{name: "Sargis"}, {name: "Ani"}, {name: "Zaven"}],
    red: [{name: "Hayk"}, {name: "Anna"}, {name: "Suren"}],
    yellow: [{name: "vahe"}, {name: "Arman"}, {name: "Narek"}],
 }
 
-let result = Object.keys(obj).reduce((current, item) => {
+let result = Object.keys(obj).reduce((acum, item) => {
    let row = obj[item].map(element => {
       element.team = item
       return element
    })
-   return [...current, ...row]
+   return [...acum, ...row]
 }, [])
 
 console.log(result)
 
- */
+/*
 
 /// find id and marge
 let user = [{name: "David", id: 2345678}];
@@ -32,3 +32,5 @@ function findIdAndMarge(person, status){
 }
 
 console.log(findIdAndMarge(user, statuses))
+
+ */
