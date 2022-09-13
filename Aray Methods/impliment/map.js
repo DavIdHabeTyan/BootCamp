@@ -13,7 +13,9 @@
 Array.prototype.myMap = function(callback){
 
    let newArr = [];
-   this.forEach(elem => newArr.push(callback(elem)))
+   this.forEach(elem => {
+      newArr.push(callback(elem))
+   })
    return newArr
 }
 let arr = [1, 3, 4];

@@ -1,3 +1,4 @@
+/*
 Array.prototype.myFind = function(callback) {
    for(let i = 0; i < this.length; i++) {
       if(callback(this[i])) {
@@ -14,3 +15,19 @@ const inventory = [
 console.log(inventory.myFind(function(elem) {
    return elem.name === "apples";
 }));
+
+
+
+ */
+
+
+function myFind(arr, callback) {
+   for (let i = 0; i < arr.length; i++) {
+      if (callback(arr[i], i, arr)) {
+         return arr[i]
+      }
+   }
+}
+console.log(myFind([12, 3, 4], function (elem) {
+   return elem === 3
+}))
