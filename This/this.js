@@ -28,6 +28,7 @@
 // calc.increment(); // => 1
 // calc.increment();
 
+/*
 class Foo {
    bar = () => {
       console.log(this);
@@ -42,8 +43,25 @@ const testArrow = () => {
 };
 
 console.log(testArrow)
+*/
 
 
+let text = "a good example"
+function changeText(text){
+   let lastText = text.split(' ').pop();
+   let arrSTr = text.split(' ')
+   arrSTr.splice(arrSTr.length-1, 1);
+   arrSTr.unshift(lastText)
+   return arrSTr.join(' ')
+}
+console.log(changeText(text));
 
+
+let numb = 456;
+
+while (numb > 0) {
+   let lastNumb = numb % 10;
+
+}
 
 

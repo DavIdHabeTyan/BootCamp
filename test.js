@@ -32,23 +32,24 @@
 // }
 // console.log(result)
 
-const obj1 = {
-   result: 0
-}
+// const obj1 = {
+//    result: 0
+// }
+//
+// const obj2 = {
+//    result: 0
+// }
+//
+// function reduceAdd(){
+//    let result = 0
+//    for(let i = 0, len = arguments.length; i < len; i++){
+//       result += arguments[i]
+//    }
+//    this.result = result
+// }
+//
+// reduceAdd.apply(obj1, [1,2,3,4,5])
 
-const obj2 = {
-   result: 0
-}
-
-function reduceAdd(){
-   let result = 0
-   for(let i = 0, len = arguments.length; i < len; i++){
-      result += arguments[i]
-   }
-   this.result = result
-}
-
-reduceAdd.apply(obj1, [1,2,3,4,5])
-
+//gtnel tvio amena motik qarakusiner@ orinak 20 tvin@ 4-(16) and 5-(25);
 
 
